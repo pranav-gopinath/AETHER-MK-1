@@ -54,7 +54,7 @@ AETHER MK-1 is open-source and highly adaptable. Developers, researchers, and en
 
 ## 💡 Why Use AETHER? (Value Proposition)
 * **Zero Infrastructure Dependency:** Operates independently of local cellular networks, external Wi-Fi routers, or cloud servers. The dual-node system creates its own localized RF environment.
-* **Extreme Cost Efficiency:** At under ₹1,000 (~$12 USD) per node, SAR teams can deploy hundreds of AETHER modules across a disaster zone for the price of a single traditional ground-penetrating radar unit.
+* **Extreme Cost Efficiency:** At under ₹1,000 (~$12 USD), SAR teams can deploy hundreds of AETHER modules across a disaster zone for the price of a single traditional ground-penetrating radar unit.
 * **Privacy by Design:** Because the system analyzes RF signal scattering rather than optical imagery or audio recordings, it guarantees absolute privacy for monitored subjects.
 * **Edge AI:** All neural network inference happens directly on the 240MHz ESP32 silicon, resulting in microsecond latency and zero data-transmission bottlenecks.
 
