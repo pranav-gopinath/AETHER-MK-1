@@ -75,7 +75,7 @@ To reproduce this project, you will need the following off-the-shelf components:
 2. **1x LED (Red)** (For the physical alert mechanism on the RX node)
 3. **1x 330Ω Resistor** (To protect the LED)
 4. **Standard Breadboards & Jumper Wires**
-5. **2x Portable 5V Power Banks** (For untethered, remote field deployment)
+5. **Portable 5V Power Banks** (For untethered, remote field deployment)
 
 ---
 
