@@ -14,11 +14,7 @@
 
 <!-- VIDEO PLACEHOLDER -->
 <div align="center">
-  
-
-https://github.com/user-attachments/assets/38272956-5354-4b62-8497-ce65123a21a5
-
-
+  <video src="https://github.com/user-attachments/assets/38272956-5354-4b62-8497-ce65123a21a5" width="100%" autoplay loop muted playsinline></video>
 </div>
 
 ## The Mission
