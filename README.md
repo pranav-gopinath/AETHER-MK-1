@@ -12,9 +12,9 @@
 
 <br />
 
-<!-- VIDEO PLACEHOLDER -->
+<!-- GIF PLACEHOLDER -->
 <div align="center">
- <video src="https://github.com/user-attachments/assets/38272956-5354-4b62-8497-ce65123a21a5" width="100%" autoplay loop muted playsinline></video>
+<img width="540" height="304" alt="presentation_video" src="https://github.com/user-attachments/assets/57d81741-fec4-448f-8a5d-f0a8b73b82ab" />
 </div>
 
 ## The Mission
