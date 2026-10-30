@@ -14,10 +14,15 @@
 
 <!-- VIDEO PLACEHOLDER -->
 <div align="center">
-  <video src="https://github.com/pranav-gopinath/AETHER-MK-1/raw/main/assets/presentation_video.mp4" width="100%" autoplay loop muted playsinline></video>
+  
+
+https://github.com/user-attachments/assets/38272956-5354-4b62-8497-ce65123a21a5
+
+
 </div>
 
 ## The Mission
+
 During structural collapses, the critical window to locate trapped survivors is 72 hours. Traditional Search and Rescue (SAR) technologies face severe physical limitations: thermal cameras cannot penetrate solid concrete, rescue dogs are impeded by toxic hazards, and acoustic microphones require the victim to be conscious. 
 
 **AETHER MK-1** bypasses these limitations. Operating entirely via edge computing, it is an ultra-low-cost, non-line-of-sight radar system that utilizes standard 2.4GHz Wi-Fi signals to detect the physical movements of trapped bodies through solid barriers.
