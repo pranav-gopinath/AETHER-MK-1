@@ -14,7 +14,7 @@
 
 <!-- VIDEO PLACEHOLDER -->
 <div align="center">
-  <video src="https://github.com/pranav-official007/AETHER-MK-1/raw/main/assets/presentation_video.mp4" width="100%" autoplay loop muted playsinline></video>
+  <video src="https://github.com/pranav-gopinath/AETHER-MK-1/raw/main/assets/presentation_video.mp4" width="100%" autoplay loop muted playsinline></video>
 </div>
 
 ## The Mission
