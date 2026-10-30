@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/zeniq_logo.png" alt="ZENIQ Team Logo" width="300" />
+  <img src="assets/zeniq_logo.png" alt="ZENIQ Team Logo" width="500" />
   <h1>AETHER MK-1</h1>
   <p><strong>Ambient Edge-Computing Topology for Non-Line-Of-Sight Human Emergency Rescue</strong></p>
 
