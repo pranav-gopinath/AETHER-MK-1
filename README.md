@@ -20,7 +20,7 @@
 
 <br />
 
-## 📖 Table of Contents
+📖 Table of Contents
 - [The Mission](#-the-mission)
 - [Real-World Applications](#-real-world-applications)
 - [Why Use AETHER? (Value Proposition)](#-why-use-aether-value-proposition)
@@ -33,43 +33,39 @@
 
 ---
 
-## 🌍 The Mission
+🌍 The Mission
 During structural collapses, the critical window to locate trapped survivors is 72 hours. Traditional Search and Rescue (SAR) technologies face severe physical limitations: thermal cameras cannot penetrate solid concrete, rescue dogs are impeded by toxic hazards, and acoustic microphones require the victim to be conscious. 
 
 **AETHER MK-1** bypasses these limitations. Operating entirely via edge computing, it is an ultra-low-cost, non-line-of-sight radar system that utilizes standard 2.4GHz Wi-Fi signals to detect the physical movements of trapped bodies through solid barriers.
 
-**Project Origins:** This system was conceived and developed as a first-year college engineering project. I served as the Team Leader for **Team ZENIQ**, driving the core hardware architecture, machine learning pipeline, and field testing to ensure the project met strict budget and performance constraints.
+**Project Origins:** This system was conceived and developed as a first-year college engineering project. As the **Founder of AETHER MK-1** and Team Leader for **Team ZENIQ**, I drove the core hardware architecture, machine learning pipeline, and field testing to ensure the project met strict budget and performance constraints.
 
----
 
-## 🚀 Real-World Applications
+🚀 Real-World Applications
 AETHER MK-1 is open-source and highly adaptable. Developers, researchers, and engineers can fork this repository to build solutions for:
 
-* **Disaster Search and Rescue (SAR):** Rapidly deploying disposable, low-cost sensor swarms over earthquake or avalanche debris to detect survivor movement through rubble.
-* **Tactical Situational Awareness:** Allowing law enforcement or first responders to detect human presence behind closed doors or walls prior to breaching.
-* **Privacy-Preserving Elder Care:** Monitoring the movement and activity levels of elderly individuals in bathrooms or bedrooms without intrusive optical cameras.
-* **Smart Home Automation:** Utilizing wall-penetrating presence detection to control HVAC, lighting, or security systems based on actual room occupancy rather than line-of-sight motion sensors.
+- **Disaster Search and Rescue (SAR):** Rapidly deploying disposable, low-cost sensor swarms over earthquake or avalanche debris to detect survivor movement through rubble.
+- **Tactical Situational Awareness:** Allowing law enforcement or first responders to detect human presence behind closed doors or walls prior to breaching.
+- **Privacy-Preserving Elder Care:** Monitoring the movement and activity levels of elderly individuals in bathrooms or bedrooms without intrusive optical cameras.
+- **Smart Home Automation:** Utilizing wall-penetrating presence detection to control HVAC, lighting, or security systems based on actual room occupancy rather than line-of-sight motion sensors.
 
----
 
-## 💡 Why Use AETHER? (Value Proposition)
-* **Zero Infrastructure Dependency:** Operates independently of local cellular networks, external Wi-Fi routers, or cloud servers. The dual-node system creates its own localized RF environment.
-* **Extreme Cost Efficiency:** At under ₹1,000 (~$12 USD), SAR teams can deploy hundreds of AETHER modules across a disaster zone for the price of a single traditional ground-penetrating radar unit.
-* **Privacy by Design:** Because the system analyzes RF signal scattering rather than optical imagery or audio recordings, it guarantees absolute privacy for monitored subjects.
-* **Edge AI:** All neural network inference happens directly on the 240MHz ESP32 silicon, resulting in microsecond latency and zero data-transmission bottlenecks.
+💡 Why Use AETHER? (Value Proposition)
+- **Zero Infrastructure Dependency:** Operates independently of local cellular networks, external Wi-Fi routers, or cloud servers. The dual-node system creates its own localized RF environment.
+- **Extreme Cost Efficiency:** At under ₹1,000 (~$12 USD), SAR teams can deploy hundreds of AETHER modules across a disaster zone for the price of a single traditional ground-penetrating radar unit.
+- **Privacy by Design:** Because the system analyzes RF signal scattering rather than optical imagery or audio recordings, it guarantees absolute privacy for monitored subjects.
+- **Edge AI:** All neural network inference happens directly on the 240MHz ESP32 silicon, resulting in microsecond latency and zero data-transmission bottlenecks.
 
----
 
-## ⚙️ Core Architecture
+⚙️ Core Architecture
 The system is built on a two-node hardware architecture using commodity DOIT ESP32 DevKit V1 microcontrollers.
 
 - **Transmitter Node (Illuminator):** Configured as an Access Point (SSID: `AETHER_TX_MK-1`), it continuously floods the debris field with 2.4GHz electromagnetic radiation.
 - **Receiver Node (AI Brain & Radar):** Maintains a "Hard Lock" to the Illuminator to prevent signal dropout. It polls the Received Signal Strength Indicator (RSSI) every 8 milliseconds.
 - **Alert Mechanism:** A physical GPIO-driven visual alert triggers instantly upon a positive AI classification, requiring zero graphical user interfaces or cloud connectivity.
 
----
 
-## 🛠️ Hardware & Bill of Materials
+🛠️ Hardware & Bill of Materials
 To reproduce this project, you will need the following off-the-shelf components:
 1. **2x DOIT ESP32 DevKit V1** (One for TX, one for RX)
 2. **1x LED (Red)** (For the physical alert mechanism on the RX node)
@@ -77,9 +73,8 @@ To reproduce this project, you will need the following off-the-shelf components:
 4. **Standard Breadboards & Jumper Wires**
 5. **Portable 5V Power Banks** (For untethered, remote field deployment)
 
----
 
-## 🧠 Machine Learning Pipeline
+🧠 Machine Learning Pipeline
 AETHER relies on a TinyML binary classifier trained to differentiate between dead rubble and active human movement. 
 
 1. **Data Acquisition:** The system captures multipath interference caused by RF scattering. Raw RSSI telemetry was logged via a custom Python script into `real_idle.csv` and `real_struggle.csv` datasets.
@@ -87,32 +82,37 @@ AETHER relies on a TinyML binary classifier trained to differentiate between dea
 3. **Offline Inference:** The raw RSSI data undergoes Digital Signal Processing (DSP) and is fed into a quantized neural network optimized via Edge Impulse. 
 4. **Classification:** If the dynamic movement confidence interval exceeds 60%, the C++ inference engine flags a human detection event.
 
----
 
-## 💻 Getting Started (Reproduction Guide)
+💻 Getting Started (Reproduction Guide)
 Developers looking to test or expand upon AETHER MK-1 can follow these steps:
 
 1. **Clone the Repository:**
-   ```bash
+
    git clone [https://github.com/pranav-gopinath/AETHER-MK-1.git](https://github.com/pranav-gopinath/AETHER-MK-1.git)
+
+
+3. **Setup the Transmitter:**
    
-2. **Setup the Transmitter:**
 * Open `firmware/AETHER_TX_MK-1/AETHER_TX_MK-1.ino` in the Arduino IDE.
 * Flash this to your first ESP32. Supply power to begin broadcasting the Illuminator signal.
 
 
 3. **Install Dependencies:**
+   
 * Import the provided `.zip` library from the `firmware/libraries` folder into your Arduino IDE (Sketch > Include Library > Add .ZIP Library). This contains the compiled Edge Impulse TinyML model.
 
 
 4. **Setup the Receiver:**
+   
 * Open `firmware/AETHER_RX_MK-1/AETHER_RX_MK-1.ino`.
 * Connect a Red LED to GPIO4 (via a 330Ω resistor).
 * Flash the code to your second ESP32.
 
 
 5. **Monitor Output:**
+   
 * Open the Serial Monitor (115200 baud) on the RX node to view real-time radar lock status and neural network confidence intervals.
+
 
 
 📊 Performance & Testing
